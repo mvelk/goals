@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'annotate'
 gem 'pry-rails'
 
+gem 'bcrypt'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -31,6 +32,7 @@ group :development, :test do
   gem 'byebug'
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'shoulda'
 end
 
 group :test do

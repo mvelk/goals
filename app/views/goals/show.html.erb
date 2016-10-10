@@ -1,0 +1,6 @@
+<h2><%= @goal.title %></h2>
+User: <%= @goal.user.username %>
+Status: <%=@goal.status %>
+Scope: <%= @goal.scope if current_user.id = @goal.user_id %>
+
+<%= button_to "Edit Goal", edit_goal_url(@goal) %>

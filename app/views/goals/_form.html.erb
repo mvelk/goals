@@ -1,0 +1,32 @@
+<form action="<%= url %>" method="post">
+  <%= auth_token %>
+  <%= patch_method if edit %>
+  <label>
+    Title
+    <input type="text" name="goal[title]" value="<%= goal.title %>">
+  </label>
+  <br>
+  <label>
+    Status
+    <select name="goal[status]">
+      <% statuses.each do |status| %>
+        <option value="<%= status %>" <%= 'selected' if status == goal.status %>><%= status %></option>
+      <% end %>
+    </select>
+  </label>
+  <br>
+  <br>
+  <label>
+    Public or Private?
+    <select name="goal[scope]">
+      <% scopes.each do |scope| %>
+        <option value="<%= scope %>" <%= 'selected' if scope == goal.scope %> ><%= scope %></option>
+      <% end %>
+    </select>
+  </label>
+  <br>
+
+  <input type="submit" value="Submit">
+
+
+</form>

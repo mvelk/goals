@@ -1,0 +1,9 @@
+<h2>Goals</h2>
+
+<ul>
+  <% @goals.each do |goal| %>
+    <li>
+      <%= link_to goal.title, goal_url(goal) if @goal.scope == "Public" || @goal.user_id == current_user.id %>
+    </li>
+  <% end %>
+</ul>
